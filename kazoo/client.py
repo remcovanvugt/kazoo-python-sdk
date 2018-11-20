@@ -1533,6 +1533,7 @@ class Client(object):
         self.api_key = api_key
         self._authenticated = False
         self.auth_token = None
+	self.account_id = None
 
     def authenticate(self):
         """Call this before making other api calls to fetch an auth token
