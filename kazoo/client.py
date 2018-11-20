@@ -1532,7 +1532,6 @@ class Client(object):
 
         self.api_key = api_key
         self._authenticated = False
-	self.account_id = None
         self.auth_token = None
 
     def authenticate(self):
@@ -1543,6 +1542,7 @@ class Client(object):
             self.auth_data = self.auth_request.execute(self.base_url)
             self.auth_token = self.auth_data["auth_token"]
             self.account_id = self.auth_data["data"]["account_id"]
+            logger.info('Account id is'.self.auth_data["data"]["account_id"])
             self._authenticated = True
         return self.auth_token
 
