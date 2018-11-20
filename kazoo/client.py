@@ -1532,6 +1532,7 @@ class Client(object):
 
         self.api_key = api_key
         self._authenticated = False
+	self.account_id = None
         self.auth_token = None
 
     def authenticate(self):
